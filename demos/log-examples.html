@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logging examples</title>
+  <style>
+    body{
+      background: #111;
+    }
+  </style>
+</head>
+<body>
+<script>
+
+console.log('----------------------------------');
+
+let x = 2;
+console.log(x)
+console.log({x})
+
+console.log('----------------------------------');
+
+console.log('%ix %s developer', 10, 'console');
+
+console.log('----------------------------------');
+
+console.log('%i', 12.34455241234324234);
+
+console.log('----------------------------------');
+
+console.log('%o', document.body);
+
+console.log('----------------------------------');
+
+console.log('%O', document.body);
+
+console.log('----------------------------------');
+
+console.log('%cPay attention to me','color:firebrick;font-size:40px')
+
+console.log('----------------------------------');
+
+const label = 'The Millenium Falcon Crew';
+console.group(label);
+console.log('Leia');
+console.log('Han');
+console.log('Chewie');
+console.log('Ben');
+console.groupEnd(label);
+console.log('----------------------------------');
+
+const extendedlabel = 'The Millenium Falcon Crew extended';
+const meat = 'Humanoids';
+const metal = 'Droids';
+console.group(extendedlabel);
+console.groupCollapsed(meat);
+console.log('Leia');
+console.log('Han');
+console.log('Chewie');
+console.log('Ben');
+console.groupEnd(meat);
+console.group(metal);
+console.log('R2D2');
+console.log('C3PO');
+console.groupEnd(metal);
+console.groupEnd(extendedlabel);
+
+console.log('----------------------------------');
+
+console.info('This is some information');
+console.error('This is an error');
+console.warn('This is a warning');
+
+console.log('----------------------------------');
+
+console.count('Chocula');
+console.count();
+console.count('Chocula');
+console.countReset('Chocula');
+console.count();
+console.count();
+console.count('Chocula');
+
+console.log('----------------------------------');
+
+console.time('go');
+for(let i = 0; i < 20000000000; i+=1) {
+  let x = Math.random()*2000;
+}
+console.timeEnd('go');
+
+console.log('----------------------------------');
+
+</script>
+</body>
+</html>
